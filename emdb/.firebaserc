@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "emdb-85f79": {
+      "hosting": {
+        "emdb": [
+          "emdb-85f79"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "emdb-85f79"
+  }
+}
