@@ -1,14 +1,14 @@
 {
   "targets": {
-    "emdb-85f79": {
+    "angularprojectemdb": {
       "hosting": {
-        "emdb": [
-          "emdb-85f79"
+        "emdb_project": [
+          "angularprojectemdb"
         ]
       }
     }
   },
   "projects": {
-    "default": "emdb-85f79"
+    "default": "angularprojectemdb"
   }
 }
