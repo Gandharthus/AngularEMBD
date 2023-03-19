@@ -1,7 +1,7 @@
 {
   "hosting": {
-    "target": "emdb",
-    "public": "dist/emdb",
+    "target": "emdb_project",
+    "public": "dist/emdb_project",
     "ignore": [
       "**/.*"
     ],
