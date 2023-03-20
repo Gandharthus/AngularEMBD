@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import { FirebaseError } from '@firebase/util';
+import { GoogleAuthProvider, GithubAuthProvider, FacebookAuthProvider} from '@angular/fire/auth'
 
 @Injectable({
   providedIn: 'root',
@@ -59,6 +60,18 @@ forgotPassword(email : string) {
     this.router.navigate(['/verify']);
   }, err => {
     alert('Something went wrong');
+  })
+}
+
+//sign in with google
+googleSignIn() {
+  return this.afAuth.signInWithPopup(new GoogleAuthProvider).then(res => {
+
+    this.router.navigate(['/dashboard']);
+    localStorage.setItem('token',JSON.stringify(res.user?.uid));
+
+  }, err => {
+    alert(err.message);
   })
 }
 }
