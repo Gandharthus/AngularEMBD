@@ -13,6 +13,9 @@ import { RegisterComponent } from './components/Authentification/register/regist
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { AuthService } from './auth.service';
 import { FormsModule } from '@angular/forms'; // import the FormsModule
+import { AngularFireAuthGuard } from '@angular/fire/compat/auth-guard';
+import { AngularFireAuthGuardComponent } from './angular-fire-auth-guard/angular-fire-auth-guard.component';
+
 
 //import { AngularFireModule} from '@angular/fire';
 
@@ -21,6 +24,7 @@ import { FormsModule } from '@angular/forms'; // import the FormsModule
     AppComponent,
     LoginComponent,
     RegisterComponent,
+    AngularFireAuthGuardComponent,
     
   ],
   imports: [
@@ -34,6 +38,7 @@ import { FormsModule } from '@angular/forms'; // import the FormsModule
   providers: [
     { provide: FIREBASE_OPTIONS, useValue: environment.firebase },
     AuthService,
+    AngularFireAuthGuard,
   ],
   bootstrap: [AppComponent]
 })
