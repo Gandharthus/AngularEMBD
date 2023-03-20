@@ -7,5 +7,9 @@ import { Tmdb } from './tmdb';
 })
 export class ApiService {
   public baseurl = 'https://api.themoviedb.org/3/'
-  constructor() { }
+  constructor(private http: HttpClient) {}
+    getMovie(id : Number ): Observable<Tmdb>{
+      return this.http.get<Tmdb>(this.baseurl + 'movie/' + id);
+    
+}
 }

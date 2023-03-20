@@ -3,16 +3,14 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import { AuthService } from "../../../auth.service";
 import { doc, getDoc } from "firebase/firestore";
+import { ApiService } from 'src/app/api.service';
 
-const docRef = doc(db, "cities", "SF");
-const docSnap = await getDoc(docRef);
 
-if (docSnap.exists()) {
-  console.log("Document data:", docSnap.data());
-} else {
-  // doc.data() will be undefined in this case
-  console.log("No such document!");
-}
+
+
+
+  
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -20,9 +18,10 @@ if (docSnap.exists()) {
 
 })
 export class HomeComponent implements OnInit {
-
+  public movieId:Number =-1;
   constructor(   
-     public afAuth: AuthService
+     public afAuth: AuthService,
+     public apiService: ApiService
 
   ) { }
 
@@ -30,6 +29,12 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     // Check if user is signed in
     this.afAuth.check()
+  }
+    public getMovie(){
+      this.apiService.getMovie(this.movieId).subscribe(a=>{
+        console.log(a)
+      })
+    
 
   }
 }
