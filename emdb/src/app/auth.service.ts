@@ -53,5 +53,12 @@ async signUp(email: string, password: string): Promise<void> {
       });
   }
   
-  
+// forgot password
+forgotPassword(email : string) {
+  this.afAuth.sendPasswordResetEmail(email).then(() => {
+    this.router.navigate(['/verify']);
+  }, err => {
+    alert('Something went wrong');
+  })
+}
 }
