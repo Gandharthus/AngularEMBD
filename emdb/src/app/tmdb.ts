@@ -1,4 +1,4 @@
-export interface Tmdb {
+export interface Poke {
     id: number
     name: string
 }

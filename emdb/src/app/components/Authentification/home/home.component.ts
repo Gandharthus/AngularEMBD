@@ -18,7 +18,7 @@ import { ApiService } from 'src/app/api.service';
 
 })
 export class HomeComponent implements OnInit {
-  public movieId:Number =-1;
+  public movieId:Number =10;
   constructor(   
      public afAuth: AuthService,
      public apiService: ApiService

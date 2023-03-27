@@ -12,8 +12,8 @@ import { LoginComponent } from './components/Authentification/login/login.compon
 import { RegisterComponent } from './components/Authentification/register/register.component';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { AuthService } from './auth.service';
-import { FormsModule } from '@angular/forms'; // import the FormsModule
 
+import { AngularFirestoreModule, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 
 //import { AngularFireModule} from '@angular/fire';
 

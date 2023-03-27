@@ -1,20 +1,21 @@
 import { Injectable } from '@angular/core';
-import { Tmdb } from './tmdb';
+import { Poke } from './tmdb';
+import { AngularFirestoreModule, AngularFirestoreCollection, AngularFirestore } from '@angular/fire/compat/firestore';
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  private dbPath ='/movie';
-  movieRef: AngularFireStoreCollection<Movie>;
+  private dbPath ='/emdb_collection';
+  movieRef: AngularFirestoreCollection<Poke>;
 
   constructor( private db: AngularFirestore) {
     this.movieRef = db.collection(this.dbPath);
    }
-   getAllMovie(): AngularFirestoreCollection<Movie>{
+   getAllMovie(): AngularFirestoreCollection<Poke>{
     return this.movieRef;
    }
 
-   addMovie(mov : Movie): any{
+   addMovie(mov : Poke): any{
     return this.movieRef.add({ ...mov});
    }
 }
