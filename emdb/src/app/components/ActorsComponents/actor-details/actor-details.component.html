@@ -1,6 +1,7 @@
-<div>
-  <div>
+<!-- <div class="text-white">
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 gap-4">
     <div class="actor_img">this is img</div>
+    <div>test</div>
     <div class="actor_info">
       <div class="actor_name">actor name</div>
       <div class="actor biography">
@@ -15,9 +16,7 @@
         <div
           class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 gap-4"
         >
-          <div
-            class="flex justify-center rounded-lg mb-3"
-          >
+          <div class="flex justify-center rounded-lg mb-3">
             <div
               [routerLink]=""
               class="popular-movies-content flex justify-center rounded-lg mb-3"
@@ -34,17 +33,70 @@
                   <div
                     class="w-36 sm:w-[144px] md:w-40 lg:w-44 xl:w-[144px] 2xl:w-40 text-white mt-2 font-semibold"
                   >
-                    <div class="title text-sm md:text-md">
-                      Movie Title
-                    </div>
+                    <div class="title text-sm md:text-md">Movie Title</div>
                   </div>
                   <div
                     class="popular-movies-rating bottom-section flex items-center text-white mt-1"
                   >
                     <i class="bx bxs-star mr-2 text-xl text-orange-500"></i>
-                    <div class="text-gray-300 text-sm">
-                      9
-                    </div>
+                    <div class="text-gray-300 text-sm">9</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="actor-info border-b border-gray-800">
+  <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row">
+    <div class="flex-none">
+      <img src="/assets/images/aot.jpg" alt="poster" class="w-72" />
+    </div>
+    <div class="md:ml-24">
+      <h2 class="text-4xl mt-4 md:mt-0 font-semibold">name</h2>
+
+      <p class="text-gray-300 mt-8">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+        officia laudantium ea ab quibusdam, dolores cupiditate inventore
+        voluptas similique eligendi distinctio harum praesentium iste non fugit
+        porro quis iusto iure quasi, vitae repudiandae quos impedit reiciendis.
+        Consequuntur fuga maiores, quasi nihil, sapiente nam, voluptatem
+        exercitationem quod voluptatum quos aliquam ipsam?
+      </p>
+
+      <h4 class="font-semibold mt-12 text-xl mb-6">Known For</h4>
+      <div class="know_for">
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 gap-4"
+        >
+          <div class="flex justify-center rounded-lg mb-3">
+            <div
+              [routerLink]=""
+              class="popular-movies-content flex justify-center rounded-lg mb-3"
+            >
+              <div class="popular-movies-card rounded-lg cursor-pointer">
+                <div>
+                  <div class="popular-movies-img w-full">
+                    <img
+                      src="/assets/images/aot.jpg"
+                      alt=""
+                      class="w-36 h-[220px] sm:w-[144px] sm:h-[212px] md:w-40 md:h-[236px] lg:w-44 lg:h-[264px] xl:w-[144px] xl:h-[216px] 2xl:w-40 2xl:h-[240px] object-cover rounded-lg"
+                    />
+                  </div>
+                  <div
+                    class="w-36 sm:w-[144px] md:w-40 lg:w-44 xl:w-[144px] 2xl:w-40 text-white mt-2 font-semibold"
+                  >
+                    <div class="title text-sm md:text-md">Movie Title</div>
+                  </div>
+                  <div
+                    class="popular-movies-rating bottom-section flex items-center text-white mt-1"
+                  >
+                    <i class="bx bxs-star mr-2 text-xl text-orange-500"></i>
+                    <div class="text-gray-300 text-sm">9</div>
                   </div>
                 </div>
               </div>
