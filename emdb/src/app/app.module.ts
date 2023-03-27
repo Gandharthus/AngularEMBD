@@ -15,6 +15,8 @@ import { AuthService } from './auth.service';
 import { FormsModule } from '@angular/forms'; // import the FormsModule
 import { AngularFireAuthGuard } from '@angular/fire/compat/auth-guard';
 import { AngularFireAuthGuardComponent } from './angular-fire-auth-guard/angular-fire-auth-guard.component';
+import { ForgotPassComponent } from './components/Authentification/forgot-pass/forgot-pass.component';
+import { VerifyMailComponent } from './components/Authentification/verify-mail/verify-mail.component';
 
 
 //import { AngularFireModule} from '@angular/fire';
@@ -25,6 +27,8 @@ import { AngularFireAuthGuardComponent } from './angular-fire-auth-guard/angular
     LoginComponent,
     RegisterComponent,
     AngularFireAuthGuardComponent,
+    ForgotPassComponent,
+    VerifyMailComponent,
     
   ],
   imports: [
