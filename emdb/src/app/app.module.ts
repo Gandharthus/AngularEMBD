@@ -10,6 +10,11 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './components/Authentification/login/login.component';
 import { RegisterComponent } from './components/Authentification/register/register.component';
+import { ActorsComponent } from './components/ActorsComponents/actors/actors.component';
+import { PopularActorsComponent } from './components/ActorsComponents/popular-actors/popular-actors.component';
+import { FormsModule } from '@angular/forms';
+import { ActorDetailsComponent } from './components/ActorsComponents/actor-details/actor-details.component';
+
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { AuthService } from './auth.service';
 import { FormsModule } from '@angular/forms'; // import the FormsModule
@@ -26,6 +31,10 @@ import { VerifyMailComponent } from './components/Authentification/verify-mail/v
     AppComponent,
     LoginComponent,
     RegisterComponent,
+    ActorsComponent,
+    PopularActorsComponent,
+    ActorDetailsComponent,
+
     AngularFireAuthGuardComponent,
     ForgotPassComponent,
     VerifyMailComponent,
