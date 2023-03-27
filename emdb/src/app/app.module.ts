@@ -21,6 +21,7 @@ import { RegisterComponent } from './components/Authentification/register/regist
 import { ActorsComponent } from './components/ActorsComponents/actors/actors.component';
 import { PopularActorsComponent } from './components/ActorsComponents/popular-actors/popular-actors.component';
 import { FormsModule } from '@angular/forms';
+import { ActorDetailsComponent } from './components/ActorsComponents/actor-details/actor-details.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { FormsModule } from '@angular/forms';
     RegisterComponent,
     ActorsComponent,
     PopularActorsComponent,
+    ActorDetailsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

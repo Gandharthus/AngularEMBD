@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ActorDetailsComponent } from './components/ActorsComponents/actor-details/actor-details.component';
 import { ActorsComponent } from './components/ActorsComponents/actors/actors.component';
 import { LoginComponent } from './components/Authentification/login/login.component';
 import { RegisterComponent } from './components/Authentification/register/register.component';
@@ -35,7 +36,7 @@ const routes: Routes = [
     component: TvShowDetailsComponent,
   },
   {
-    path: 'actors',
+    path: 'actor',
     component: ActorsComponent,
   },
 
