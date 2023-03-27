@@ -69,7 +69,6 @@ googleSignIn() {
 
     this.router.navigate(['/dashboard']);
     localStorage.setItem('token',JSON.stringify(res.user?.uid));
-    this.router.navigate(['']);
 
   }, err => {
     alert(err.message);
