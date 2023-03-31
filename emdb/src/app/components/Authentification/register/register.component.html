@@ -15,10 +15,10 @@
           >
             Create your account
           </h1>
-          <form class="space-y-4 md:space-y-6" onSubmit="{handleSubmit}">
+          <div class="space-y-4 md:space-y-6">
             <div
               class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-4"
-            >
+            ><!--
               <div>
                 <label
                   for="name"
@@ -51,7 +51,7 @@
                   required=""
                 />
               </div>
-
+            -->
               <div>
                 <label
                   for="email"
@@ -63,6 +63,7 @@
                   type="email"
                   name="email"
                   id="email"
+                  #userEmail required
                   class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="name@company.com"
                   required=""
@@ -79,18 +80,19 @@
                   type="password"
                   name="password"
                   id="password"
+                  #userPassword required
                   placeholder="••••••••"
                   class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   required=""
                 />
               </div>
             </div>
-            <button
-              type="submit"
+            <input
+              type="button"
+              value="Sign up"
               class="cursor-pointer w-full text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-            >
-              Sign up
-            </button>
+              (click)="authService.signUp(userEmail.value, userPassword.value)"
+              >
             <p class="text-sm font-light text-gray-500 dark:text-gray-400">
               Already have an account?
               <span
@@ -100,7 +102,7 @@
                 Sign in
               </span>
             </p>
-          </form>
+          </div>
         </div>
       </div>
     </div>

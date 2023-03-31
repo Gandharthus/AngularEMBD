@@ -1,7 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+import { AuthService } from './auth.service';
+import { AngularFireAuthGuard } from '@angular/fire/compat/auth-guard';
+import { AngularFireAuthGuardComponent } from './angular-fire-auth-guard/angular-fire-auth-guard.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MoviesComponent } from './components/MoviesComponents/movies/movies.component';
@@ -27,6 +35,7 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     MoviesComponent,
     TvShowsComponent,
+    AngularFireAuthGuardComponent,
     HomeComponent,
     MovieDetailsComponent,
     PopularMoviesComponent,
@@ -42,8 +51,14 @@ import { FormsModule } from '@angular/forms';
     ActorsComponent,
     PopularActorsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, 
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),BrowserAnimationsModule,
+    FormsModule],
+  providers: [{ provide: FIREBASE_OPTIONS, useValue: environment.firebase },
+    AuthService,
+    AngularFireAuthGuard,],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

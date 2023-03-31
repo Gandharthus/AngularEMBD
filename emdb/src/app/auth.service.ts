@@ -45,7 +45,7 @@ async signUp(email: string, password: string): Promise<void> {
                 this.router.navigate(['/login']);
               });
             }
-            this.router.navigate(['']);
+            this.router.navigate(['/movies']);
           }
         });
       })
@@ -67,7 +67,7 @@ forgotPassword(email : string) {
 googleSignIn() {
   return this.afAuth.signInWithPopup(new GoogleAuthProvider).then(res => {
 
-    this.router.navigate(['/dashboard']);
+    this.router.navigate(['/movies']);
     localStorage.setItem('token',JSON.stringify(res.user?.uid));
 
   }, err => {

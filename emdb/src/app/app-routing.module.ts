@@ -8,7 +8,8 @@ import { MovieDetailsComponent } from './components/MoviesComponents/movie-detai
 import { MoviesComponent } from './components/MoviesComponents/movies/movies.component';
 import { TvShowDetailsComponent } from './components/TvShowsComponents/tv-show-details/tv-show-details.component';
 import { TvShowsComponent } from './components/TvShowsComponents/tv-shows/tv-shows.component';
-
+import {ForgotPassComponent} from './components/Authentification/forgot-pass/forgot-pass.component';
+import {VerifyMailComponent} from './components/Authentification/verify-mail/verify-mail.component';
 const routes: Routes = [
   {
     path: '',
@@ -38,6 +39,14 @@ const routes: Routes = [
     path: 'actors',
     component: ActorsComponent,
   },
+  {
+    path: 'forgot',
+    component: ForgotPassComponent,
+  },
+  {
+    path: 'verify',
+    component: VerifyMailComponent,
+  }
 
 ];
 
