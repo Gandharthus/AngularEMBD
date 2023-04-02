@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { AuthService } from './auth.service';
 import { AngularFireAuthGuard } from '@angular/fire/compat/auth-guard';
-import { AngularFireAuthGuardComponent } from './angular-fire-auth-guard/angular-fire-auth-guard.component';
+//import { AngularFireAuthGuardComponent } from './angular-fire-auth-guard/angular-fire-auth-guard.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MoviesComponent } from './components/MoviesComponents/movies/movies.component';
@@ -35,7 +35,6 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     MoviesComponent,
     TvShowsComponent,
-    AngularFireAuthGuardComponent,
     HomeComponent,
     MovieDetailsComponent,
     PopularMoviesComponent,
@@ -49,7 +48,7 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     RegisterComponent,
     ActorsComponent,
-    PopularActorsComponent,
+    PopularActorsComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, 
     provideFirebaseApp(() => initializeApp(environment.firebase)),
